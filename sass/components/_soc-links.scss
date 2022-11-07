@@ -1,0 +1,41 @@
+.soc-links {
+  display: flex;
+  justify-content: center;
+}
+
+.soc-links__item {
+  width: 44px;
+  height: 44px;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.soc-links__link {
+  width: 100%;
+  height: 100%;
+  @extend %flex-centering;
+  border-radius: 50%;
+  transition: color $transition-time, background-color $transition-time;
+  &:hover,
+  &:focus {
+    color: $light-text-color;
+    background-color: $accent-color;
+  }
+}
+
+.soc-links__link--grey {
+  color: #afb1b8;
+  background-color: transparent;
+}
+
+.soc-links__link--white {
+  color: $light-text-color;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.soc-links__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

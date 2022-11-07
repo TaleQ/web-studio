@@ -1,0 +1,41 @@
+.activities {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.activities__main-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: $secondary-text-color;
+}
+
+.activities__list {
+  display: flex;
+}
+
+.activities__item {
+  flex-basis: calc((100% - 60px)/3);
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.activities__text {
+  width: 100%;
+  padding: 27px 0;
+  position: absolute;
+  bottom: 0px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $light-text-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
