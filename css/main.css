@@ -525,6 +525,7 @@ img {
   display: flex;
   align-items: center;
   position: relative;
+  height: 80px;
 }
 
 .header__logo {
@@ -617,6 +618,7 @@ img {
     display: inline-flex;
     align-items: center;
     font-size: 14px;
+    margin-bottom: 0px;
   }
   .contacts__link:not(:last-child) {
     margin-right: 50px;

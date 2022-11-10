@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   position: relative;
+  height: 80px;
 }
 
 .header__logo {
@@ -64,10 +65,6 @@
       bottom: -1px;
       background-color: $accent-color;
       border-radius: 4px;
-
-      // @include desktop {
-      //   bottom: -2px;
-      // }
     }
   }
 }
@@ -102,6 +99,7 @@
     display: inline-flex;
     align-items: center;
     font-size: 14px;
+    margin-bottom: 0px;
 
     &:not(:last-child) {
       margin-right: 50px;
