@@ -1,10 +1,28 @@
 .portfolio__filters {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  row-gap: 15px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 326px;
+  }
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
 }
 
 .filters__item:not(:last-child) {
@@ -26,33 +44,58 @@
   &:active {
     background-color: $accent-color;
     color: $light-text-color;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
 
 .works {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
 }
 
 .works__item {
-  flex-basis: calc((100% - 60px) / 3);
+  flex-basis: 100%;
   background-color: $main-background-color;
+
+  @media screen and (max-width: 479px) {
+    max-width: 370px;
+  }
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 
 .works__link {
   display: inline-block;
   transition: box-shadow $transition-time;
   &:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
 
 .works__thumb {
   position: relative;
   overflow: hidden;
+}
+
+.works__thumb > img {
+  width: 100%;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 450px;
+  }
 }
 
 .works__overlay-text {
@@ -77,6 +120,12 @@
   padding: 20px 24px;
   border: 1px solid #ececec;
   border-top: none;
+}
+
+.add-height {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 146px;
+  }
 }
 
 .works__title {

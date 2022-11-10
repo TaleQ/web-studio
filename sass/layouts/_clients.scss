@@ -1,13 +1,5 @@
 .clients__title {
-  margin-bottom: 50px;
-  font-size: 28px;
-  line-height: 1.16;
-  text-align: center;
-  color: $secondary-text-color;
-
-  @include desktop {
-    font-size: 36px;
-  }
+  @extend %section-title;
 }
 
 .clients__list {
@@ -15,6 +7,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .clients__item {
