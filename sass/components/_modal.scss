@@ -8,12 +8,6 @@
   transition: opacity 500ms linear, visibility 500ms linear;
 }
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -75,7 +69,7 @@
   display: block;
   font-weight: 700;
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.5;
   text-align: center;
   color: $secondary-text-color;
 

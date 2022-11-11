@@ -1,5 +1,5 @@
 .portfolio__filters {
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
 
   @include tablet {
     margin-bottom: 30px;
@@ -14,6 +14,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  column-gap: 8px;
   row-gap: 15px;
 
   @media screen and (min-width: 480px) and (max-width: 767px) {
@@ -23,10 +24,6 @@
   @include tablet {
     flex-wrap: nowrap;
   }
-}
-
-.filters__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filters__btn {
